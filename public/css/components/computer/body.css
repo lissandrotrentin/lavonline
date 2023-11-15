@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    height: 100%;
+}
+
+
+
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.btn-click{
+    position: relative;
+    padding: 20px 500px;
+    border-radius: 10px;
+    background-color: #90D6E5;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-btn a{
+    position: absolute;
+    cursor: pointer;
+    color: black;
+    top: 40rem;
+}
+

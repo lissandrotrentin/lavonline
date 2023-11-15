@@ -1,16 +1,35 @@
-<x-app-layout>
-    <h1>bem vindo {{ auth()->user()->name }} </h1>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+
+@if (count($address) > 0)
+@else
+<ul>
+    <a href=" {{ route('address.form') }} ">
+    <li>cadastre um enedereco para comecar</li>
+    </a>
+</ul>
+@endif
+
+
+<form action="" method="post">
+
+    <input type="text" name="pesquisa" placeholder="pesquisar">
+
+    <input type="submit" value="pesquisar">
+</form>
+
+@foreach($washings as $washing)
+<div>
+<table>
+    <tr>
+        <th>nome</th>
+        <th>cidade</th>
+        <th>rua</th>
+    </tr>
+    <tr>
+        <td>{{ $washing->nome_fantasia }}</td>
+        <td>{{ $washing->cidade }}</td>
+        <td>{{ $washing->rua }}</td>
+    </tr>
+</table>
+</div>
+@endforeach

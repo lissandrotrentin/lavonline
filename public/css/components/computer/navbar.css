@@ -1,0 +1,38 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10rem;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+
+
+.header ul a{
+    color: black;   
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+
+
+.header .img{
+    height: 64px;
+    width: 64px;
+}
+
+.header .title-nav{
+    position: absolute;
+    left: 14rem;
+    z-index: 5;
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+

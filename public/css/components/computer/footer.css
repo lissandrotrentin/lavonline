@@ -1,0 +1,141 @@
+.img{
+    height: 120px;
+    width: 120px;
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    position: relative;
+    margin-top: 50rem;
+}
+
+footer {
+    width: 100%;
+}
+
+#footer_content{
+    background-color: #101938;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1{
+    margin-bottom: .75rem;
+}
+
+#footer_social img{
+    font-size: 1.25rem;
+}
+
+#footer_social img:hover{
+    opacity: .8;
+}
+
+
+
+
+#footer_social{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social .footer_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: black;
+    border-radius: 50%;
+}
+
+
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    list-style: none;
+}
+
+.footer_list .footer_link{
+    color: black;
+    transition:  all .4s;
+}
+
+.footer_list .footer_link:hover{
+    color: red;
+}
+
+#footer_contato{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_contato p{
+    color: black;
+}
+
+#footer_contato h3{
+    color: black;
+}
+
+#input_group{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#input_group input{
+    all: unset;
+    padding: .75rem;
+    width: 100%;
+}
+
+#input_group button{
+    border: none;
+    color: black;
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+#input_group button:hover{
+    opacity: .8;
+}
+
+#footer_copyright{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    #footer_content{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px){
+    #footer_content{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+
+
+
