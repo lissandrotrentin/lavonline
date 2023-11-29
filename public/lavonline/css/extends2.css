@@ -1,0 +1,34 @@
+@import 'style.css';
+@import 'components/computer/body.css';
+@import 'components/computer/footer.css';
+@import 'components/computer/header.css';
+@import 'components/computer/navbar.css';
+@import 'components/computer/cards.css';
+@import 'components/computer/cadastrar.css';
+
+
+
+:root{
+    --cinza: #282A3A;
+    --bege: #C69749;
+    --azul_esc: #182747;
+    --preto: #0f0f0f;
+ 
+    --azul_cl:#2E8A99;
+ 
+    --azul: #00A8CC;
+ 
+    --cinza2: #1B262C;
+ 
+    --azul2: #0174BE;
+ 
+    --amarelo: #FFC436;
+ 
+    --azul3: #362FD9;
+ 
+    --azul4: royalblue;
+ 
+    --azul5: #0d084d;
+ 
+    --preto2: #1F1F24;
+ }

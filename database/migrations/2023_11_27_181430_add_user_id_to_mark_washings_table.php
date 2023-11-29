@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('images_washings', function (Blueprint $table) {
-            $table->foreignId('washing_id')->constrained();
+        Schema::table('mark_washings', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('images_washings', function (Blueprint $table) {
-            $table->foreignId('washing_id')->constrained()->onDelete('cascade');
+        Schema::table('mark_washings', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 };

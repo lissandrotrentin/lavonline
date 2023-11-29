@@ -2,12 +2,13 @@
 <html lang="pr_BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
     <!-- ICON -->
 
-    <link rel="shortcut icon" href="assents/imgs/Logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="assents/imgs/nav/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/lavonline/assents/imgs/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/lavonline/assents/imgs/nav/Logo.png" type="image/x-icon">
 
     <!-- FONTS -->
 
@@ -15,17 +16,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     
-    <link rel="stylesheet" href="../css/extends.css">
+    <link rel="stylesheet" href="/lavonline/css/extends.css">
 
     <!-- JS -->
 
-    <script src="../js/script.js" defer></script>
+    <script src="/lavonline/script/script.js" defer></script>
+    <script src="/lavonline/script/scroll.js" defer></script>
+
+    <!-- SCROLL REVEAL -->
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 
 
-    <title>Lavonline - Home</title>
+    <title>Lavonline - Inicio</title>
 
 </head>
 <body>
@@ -34,38 +44,119 @@
 
         <header class="header">
             
-            <a class="logo" href="index.html"><img src="assents/imgs/nav/Logo.png" class="img" alt="Logo"></a>
+            <a class="logo" href="#"><img src="/lavonline/assents/imgs/nav/Logo.png" class="img" alt="Logo"></a>
 
-            <a class="title-nav" href="index.html">Lavonline</a>
+            <a class="title-nav" href="#">Lavonline</a>
 
-            <nav class="navbar">
+
+            <nav>
+
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+
+                    <ul class="nav-list">
+                    
+                    <li><a href="{{ route('welcome') }}">Inicio</a></li>
+                    <li><a href="#Objetivos">Objetivos</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#quem_somos">Quem somos</a></li>
+                    <li><a href="lavacao.html">Agendar Lavação</a></li>
+                    <li>
+
+                        <a><img class="person_mob" src="/lavonline/assents/imgs/nav/person.png" alt="Person">
+
+                    <ul class="dropdown_mobile">
                 
-            <ul class="nav_links">
-                <a href="{{ route('owner.form') }}">lavacao</a>
-                <a href="#">Objetivo</a>
-                <a href="#">Beneficios</a>
-                <a href="#">Quem Somos</a>
-                <a class="cadastro" href="/register">Criar Conta</a>
-                <a class="login" href="/login">Login</a>
-            </ul>
+                        <li class="drop"><a href="cadastrar.html">Criar Conta</a></li>
+                        <li class="drop"><a href="login.html">Login</a></li>
+                
+                    </ul>
 
-        </nav>
+                    </li>
+
+                    </ul>
+
+                    </ul>
+                </div>
+
+
+
+
+                <ul class="nav_links">
+                    
+                    <li><a href="{{ route('welcome') }}">Inicio</a></li>
+                    <li><a href="#Objetivos">Objetivos</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#quem_somos">Quem somos</a></li>
+                    <!-- <li><a class="lavacao_btn item" href="lavacao.html">Agendar Lavação</a></li> -->
+                    <li>
+
+                        <a><img class="person" src="/lavonline/assents/imgs/nav/person.png" alt="Person">
+
+                    <ul class="dropdown">
+                
+                        <li class="drop"><a href="{{ route('user.store.form') }}">Criar Conta</a></li>
+                        <li class="drop"><a href="{{ route('user.login.form') }}">Login</a></li>
+                
+                    </ul>
+
+                    </li>
+
+                </ul>
+            </nav>
 
         </header>
     </section>
 
+
     <div class="container-slide">
+<!-- 
+        <div class="background"> -->
+            <!-- <div class="container_search"> -->
+
+                <!-- <div class="description_1">
+                    <h1>Lavonline</h1><br>
+                    <p>Pesquise a lavação mais próxima de você:</p><br>
+                </div>
+
+                <input type="search" class="search_text" name="procuar" placeholder="Ex: LAVAÇÃO DICAR" id="procurar">
+                <button type="submit" class="search_btn">
+                    <img class="lupa" src="assents/imgs/lupa.svg" alt="Lupa">
+                </button>
+            </div> -->
+
+                <!-- <div class="container_persons">
+                <img class="fernando" src="assents/imgs/carrossel/fernando.png" alt="Fernando">
+                </div> -->
+
+            
+        <!-- </div> -->
+
+        <!-- <div class="container_devs">
+            <div class="mini_img"></div>
+            <div class="devs">
+                <h4>Fernando:</h4>
+                <p>Programador Front-End</p>
+            </div>
+        </div> -->
+
+        <!-- <div class="container_persons">
+            <img class="fernando" src="assents/imgs/carrossel/fernando.png" alt="Fernando">
+        </div> -->
+
 
         <button id="voltar-btn"><img src="assents/imgs/arrow.png" alt="voltar-btn"></button>
 
         <div class="container-image">
-            <img id="img1" data-image="1" src="assents/imgs/carrossel/img1_2.png" alt="LavandoCarro1" class="slide on">
-            <img id="img2" data-image="2" src="assents/imgs/carrossel/img2.png" alt="LavandoCarro2" class="slide">
-            <img id="img3" data-image="3" src="assents/imgs/carrossel/img3.png" alt="LavandoCarro3" class="slide">
-            <img id="img4" data-image="4" src="assents/imgs/carrossel/img4.jpg" alt="LavandoCarro4" class="slide">
+            <img id="img1" data-image="1" src="/lavonline/assents/imgs/carrossel/img1_2.png" alt="LavandoCarro1" class="slide on">
+            <img id="img2" data-image="2" src="/lavonline/assents/imgs/carrossel/img2.png" alt="LavandoCarro2" class="slide">
+            <img id="img3" data-image="3" src="/lavonline/assents/imgs/carrossel/img3.png" alt="LavandoCarro3" class="slide">
+            <img id="img4" data-image="4" src="/lavonline/assents/imgs/carrossel/img4.jpg" alt="LavandoCarro4" class="slide">
         </div>
 
-        <button id="prox-btn"><img src="assents/imgs/arrow.png" alt="prox-btn"></button>
+        <button id="prox-btn"><img src="/lavonline/assents/imgs/arrow.png" alt="prox-btn"></button>
 
     </div>
 
@@ -77,51 +168,184 @@
         <i class="bola" data-image="4" id="bola4"></i>
     </div>
 
-    <section class="container-btn">
-        <a href="#"><button class="btn-click">Teste</button></a>
-    </section>
 
-    <section class="container-cards">
 
-        <div class="card1">
-            <div class="container-text">
 
-                 <h1>É Dono de uma lavação?</h1>
+    <section id="Objetivos" class="Cards">
 
-                 <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica
-                    e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor
-                    desconhecido pegou uma bandeja de tipos e os embaralhou
-                    para fazer um livro de modelos de tipos.</p>
+        <div class="container">
+            <div class="card" id="card1">
+                <div class="content">
 
-                 <a href="#"><button>Venha fazer parte do nosso App!</button></a>
+                <div class="ref_img">
+
+                    <img  src="/lavonline/assents/imgs/body/cards/lavando.png" alt="lapisB" class="i1">
+
+                </div>
+
+                    <h2>A melhor lavação</h2>
+
+                    <p>Nosso site consta com as melhores lavações perto de você</p>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="container">
+        <div class="card" id="card2">
+            <div class="content">
+
+                <div class="ref_img">
+
+                    <img  src="/lavonline/assents/imgs/body/cards/lavando.png" alt="lapisB" class="i1">
+
+                </div>
+
+                <h2>Agilidade</h2>
+                <p>Nosso sistema trabalha de uma maneira rápida e fácil de compreender</p>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <div class="card" id="card3">
+            <div class="content">
+                <div class="ref_img">
+
+                    <img  src="/lavonline/assents/imgs/body/cards/lavando.png" alt="lapisB" class="i1">
+
+                </div>
+                <h2>Segurança</h2>
+                <p>Fazemos questão de que suas informações estejam o mais seguro possível</p>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="container">
+            <div class="card" id="card4">
+                <div class="content">
+                    <div class="ref_img">
+    
+                        <img  src="/lavonline/assents/imgs/body/cards/lavando.png" alt="lapisB" class="i1">
+    
+                    </div>
+                    <h2>Prático</h2>
+                    <p>Nosso sistema é prático para você que não tem muito tempo</p>
+                </div>
+            </div>
+            </div>
+
     </section>
 
-        <div class="container-card2">
 
-        <div class="card2">
 
-            <div class="container-text">
-                <h1>Objetivo</h1>
+    <main id="beneficios" class="container_main">
 
-                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de 
-                    impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido 
-                    pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
-           </div>
+        <section class="main">
+            <div class="container_explic">
+                <div class="explic">
+                    <div class="description">
+                        <h1>Descubra a Excelência em Lavagem de Carros Online</h1><br>
+
+                        <p>Bem-vindo ao Lavonline, o seu destino premium para serviços de lavagem de carros online. Estamos comprometidos em oferecer a melhor experiência de lavagem, combinando qualidade, agilidade e segurança em cada serviço.</p>
+                    </div>
+                    <div class="container_img_explic">
+                    <img src="/lavonline/assents/imgs/body/Lavando_carro.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+
+
+
+
+    <main id="quem_somos" class="container_card_bola">
+
+        <div class="containers_bolas">
+            <div class="bolas">
+                <div class="img_bola">
+                <img class="bola_card" src="/lavonline/assents/imgs/carrossel/img1.png" alt="BolaLav1">
+            </div>
+                <div class="container_descri">
+                    <h2>Compromisso com a Qualidade</h2>
+                    <p>Nossa plataforma garante as melhores lavagens, priorizando a qualidade em cada serviço oferecido.</p>
+                </div>
+            </div>
         </div>
-            
+    </main>
+
+    <main id="card2" class="container_card_bola">
+
+        <div class="containers_bolas">
+            <div class="bolas">
+                
+                <div class="container_descri">
+                    <h2>Lavagem Online Confiável e Eficiente</h2>
+                    <p>Seja bem-vindo ao Lavonline, onde a confiança e a eficiência se encontram. Comprometemo-nos a oferecer uma experiência de lavagem de carros online confiável, combinando qualidade e segurança em cada serviço prestado.</p>
+                </div>
+
+                <div class="img_bola">
+                    <img class="bola_card" src="/lavonline/assents/imgs/carrossel/img1.png" alt="BolaLav1">
+                </div>
+
+            </div>
         </div>
+    </main>
 
-        <div class="card3">
+    <main id="card3" class="container_card_bola">
 
-
+        <div class="containers_bolas">
+            <div class="bolas">
+                <div class="img_bola">
+                    <img class="bola_card" src="/lavonline/assents/imgs/carrossel/img1.png" alt="BolaLav1">
+                </div>
+                
+                <div class="container_descri">
+                    <h2>Comprometimento Total</h2>
+                    <p>Nossa equipe está totalmente comprometida em fornecer serviços de lavagem online de alta qualidade e confiabilidade.</p>
+                </div>
+                
+            </div>
         </div>
+    </main>
 
-        <div class="card4">
 
-
+    <main class="containers_agende">
+        <div class="container_agende">
+            <a href="{{ route('user.login.form') }}">Clique Aqui para começar agendar sua lavação!</a>
         </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -130,20 +354,20 @@
     <footer>
         <div id="footer_content">
             <div id="footer_contacts">
-                <h1><img src="assents/imgs/nav/Logo.png" class="img" alt="Logo"></h1>
+                <h1><img src="/lavonline/assents/imgs/nav/Logo.png" class="img" alt="Logo"></h1>
                 <p>Veja Algum de nossos exemplos nas nossas redes</p>
 
                 <div id="footer_social">
                     <a href="#" class="footer_link" id="instagram">
-                        <img src="assents/imgs/footer/instagram.svg" alt="Instagram">
+                        <img src="/lavonline/assents/imgs/footer/instagram.svg" alt="Instagram">
                     </a>
 
                     <a href="#" class="footer_link" id="facebook">
-                        <img src="assents/imgs/footer/facebook.svg" alt="facebook">
+                        <img src="/lavonline/assents/imgs/footer/facebook.svg" alt="facebook">
                     </a>
 
                     <a href="#" class="footer_link" id="whatsapp">
-                        <img src="assents/imgs/footer/whatsapp.svg" alt="whatsapp">
+                        <img src="/lavonline/assents/imgs/footer/whatsapp.svg" alt="whatsapp">
                     </a>
                 </div>
             </div>
@@ -195,8 +419,8 @@
 
             <div id="input_group">
                 <input type="email" name="email" id="email">
-                <button>
-                    <img src="assents/imgs/footer/gmail.svg" alt="email">
+                <button type="submit">
+                    <img src="/lavonline/assents/imgs/footer/gmail.svg" alt="email">
                 </button>
             </div>
 

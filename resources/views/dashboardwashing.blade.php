@@ -14,23 +14,21 @@ ola lavacao {{ session('name') }} {{ session('id') }}
 
 @if( count($washing_verify) > 0)
 <ul>
-    <li>vamos adicionar as imagens</li>
+    <li>agora vamos cadastrar os servicos</li>
     </a>
 </ul>
-<form method="post" action="{{ route('washing.image.store') }}" enctype="multipart/form-data">
+
+<form method="post" action="{{ route('service.store') }}">
 
     @csrf
 
-    <input type="file" name="image">
+    <input type="text" name="service">
 
     <input type="submit" value="cadastrar">
 </form>
 
-@endif
 
-@if(isset($images) && count($images) > 0)
-
-<img src="/img/washings/{{ $images->image }}">
+<img src="/img/washings/{{ $washing->image }}">
 
 @endif
 

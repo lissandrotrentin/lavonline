@@ -1,4 +1,4 @@
-<form action="{{ route('washing.store') }}" method="POST">
+<form action="{{ route('washing.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             
@@ -31,6 +31,11 @@
             <div>
                 <label for="cidade" > cidade </label>
                 <input type="text" name="cidade">
+            </div>
+
+            <div>
+                <label for="imagem" > imagem </label>
+                <input type="file" name="image">
             </div>
 
                 <button>

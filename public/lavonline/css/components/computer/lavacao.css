@@ -1,0 +1,191 @@
+
+
+.container_login_pri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container_login{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 45rem;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.container_form form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;    
+}
+
+.container_img{
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 30rem;
+    display: flex;
+    padding: 4.5rem;
+}
+
+.container_img img{
+    left: -4.6rem;
+    position: relative;
+}
+
+.container_form{
+    background-color: var(--azul2);
+    width: 30rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container_img_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_img{
+    height: 94,5px;
+    width: 110px;
+    margin-top: 1.3rem;
+}
+
+
+.form input{
+    margin: 5px;
+    padding: 15px;
+    border-radius: 20px;
+    color: black;
+}
+
+
+.container_login_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container_btn_escquece{
+    position: relative;
+    right: -12rem;
+}
+
+.container_btn_escquece a{
+    color: white;
+}
+
+.containers_login{
+    position: relative;
+    top: 1.5rem;
+}
+
+.containers_login .btn_escpass{
+    color: white;
+}
+.form{
+    color: white;
+}
+
+.form input::placeholder{
+}
+
+.container_login_btn{
+    margin-bottom: 1rem;
+}
+
+
+
+.btn_login{
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.form{
+    font-size: 12px;
+}
+
+.container_check{
+    display: flex;
+    align-items: center;
+}
+
+.container_tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_methods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container_methods img{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container_methods a{
+    margin: 10px;
+    padding: 0;
+    border: 0;
+}
+
+.container_other{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tittles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.lines{
+    width: 5rem;
+    height: 2px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    margin: 5px;
+}
+
+.other{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_login{
+    color: black;
+    font-size: 1rem;
+}
+
+.container_seta{
+    position: relative;
+    left: 3.5rem;
+    top: .5rem;
+}
+
+.container_seta img{
+    height: 48px;
+    width: 48px;
+}

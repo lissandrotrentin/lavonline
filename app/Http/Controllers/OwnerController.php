@@ -32,7 +32,7 @@ class OwnerController extends Controller
 
     }
 
-    public function washingdashboard(Owner $owner, ImagesWashing $imagesWashing,Washing $washing)
+    public function washingdashboard(Owner $owner,Washing $washings)
     {
         $user = $owner->find(session('id'));
         
@@ -40,21 +40,17 @@ class OwnerController extends Controller
       
      if(count($washing_verify) > 0){
 
-        $washing_user = $washing->where('owner_id', session('id'))->first(); // trago pelo model os dados da lavacao caso ja possua uma
+        $washing = $washings->where('owner_id', session('id'))->first(); // trago pelo model os dados da lavacao caso ja possua uma
 
-        $images = $imagesWashing->where('washing_id', $washing_user->id)->get();
-
-        return view('dashboardwashing', compact('washing_verify','images', 'washing_user'));
+        return view('dashboardwashing', compact('washing_verify', 'washing'));
 
     }
-        
         return view('dashboardwashing', compact('washing_verify'));
-
-        
     }
 
     public function ownerstore(Request $request,Owner $owner)
     {
+
 
         $request_owner = $request->only 
         (

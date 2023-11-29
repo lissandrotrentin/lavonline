@@ -1,35 +1,318 @@
+<!DOCTYPE html>
+<html lang="pr_BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- ICON -->
+
+    <link rel="shortcut icon" href="/lavonline/assents/imgs/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/lavonline/assents/imgs/nav/Logo.png" type="image/x-icon">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="/lavonline/css/extends4.css">
+
+    <!-- JS -->
+
+    <script src="/lavonline/script/script2.js" defer></script>
+    <script src="/lavonline/script/scroll.js" defer></script>
+
+    <!-- SCROLL REVEAL -->
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 
-@if (count($address) > 0)
-@else
-<ul>
-    <a href=" {{ route('address.form') }} ">
-    <li>cadastre um enedereco para comecar</li>
-    </a>
-</ul>
-@endif
+
+    <title>Lavonline - Lavações</title>
+
+</head>
+<body>
+
+    <section class="Sec_header">
+
+        <header class="header">
+            
+            <a class="logo" href="#"><img src="/lavonline/assents/imgs/nav/Logo.png" class="img" alt="Logo"></a>
+
+            <a class="title-nav" href="#">Lavonline</a>
 
 
-<form action="" method="post">
+            <nav>
 
-    <input type="text" name="pesquisa" placeholder="pesquisar">
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
 
-    <input type="submit" value="pesquisar">
-</form>
+                    <ul class="nav-list">
 
-@foreach($washings as $washing)
-<div>
-<table>
-    <tr>
-        <th>nome</th>
-        <th>cidade</th>
-        <th>rua</th>
-    </tr>
-    <tr>
-        <td>{{ $washing->nome_fantasia }}</td>
-        <td>{{ $washing->cidade }}</td>
-        <td>{{ $washing->rua }}</td>
-    </tr>
-</table>
-</div>
-@endforeach
+                    <li><a href="{{ route('welcome') }}">Inicio</a></li> 
+                      
+                    @if (count($address) > 0)
+                    @else        
+                        <li><a href=" {{ route('address.form') }} ">cadastrar enedereco</a></li>
+                    @endif
+                    <li>
+                        <a><img class="person_mob" src="/lavonline/assents/imgs/nav/person.png" alt="Person">
+
+                    <ul class="dropdown_mobile">
+                
+                    <li class="drop"><a href="c{{ route('user.logout') }}">logout</a></li>
+                
+                    </ul>
+
+                    </li>
+
+                    </ul>
+
+                    </ul>
+                </div>
+
+
+
+                <ul class="nav_links">
+                <li><a href="{{ route('welcome') }}">Inicio</a></li> 
+                @if (count($address) > 0)
+                @else        
+                    <li><a href=" {{ route('address.form') }} ">cadastrar enedereco</a></li>
+                @endif
+                    <li>
+
+                        <a><img class="person" src="/lavonline/assents/imgs/nav/person.png" alt="Person">
+
+                    <ul class="dropdown">
+                
+                        <li class="drop"><a href="{{ route('user.logout') }}">logout</a></li>
+                
+                    </ul>
+
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+    </section>
+
+<!-- 
+    <div class="container-slide"> -->
+        <!-- 
+                <div class="background"> -->
+                    <!-- <div class="container_search"> -->
+        
+                        <!-- <div class="description_1">
+                            <h1>Lavonline</h1><br>
+                            <p>Pesquise a lavação mais próxima de você:</p><br>
+                        </div>
+        
+                        <input type="search" class="search_text" name="procuar" placeholder="Ex: LAVAÇÃO DICAR" id="procurar">
+                        <button type="submit" class="search_btn">
+                            <img class="lupa" src="assents/imgs/lupa.svg" alt="Lupa">
+                        </button>
+                    </div> -->
+        
+                        <!-- <div class="container_persons">
+                        <img class="fernando" src="assents/imgs/carrossel/fernando.png" alt="Fernando">
+                        </div> -->
+        
+                    
+                <!-- </div> -->
+        
+                <!-- <div class="container_devs">
+                    <div class="mini_img"></div>
+                    <div class="devs">
+                        <h4>Fernando:</h4>
+                        <p>Programador Front-End</p>
+                    </div>
+                </div> -->
+        
+                <!-- <div class="container_persons">
+                    <img class="fernando" src="assents/imgs/carrossel/fernando.png" alt="Fernando">
+                </div> -->
+        
+<!--         
+                <button id="voltar-btn"><img src="assents/imgs/arrow.png" alt="voltar-btn"></button>
+        
+                <div class="container-image">
+                    <img id="img1" data-image="1" src="assents/imgs/carrossel/img1_2.png" alt="LavandoCarro1" class="slide on">
+                    <img id="img2" data-image="2" src="assents/imgs/carrossel/img2.png" alt="LavandoCarro2" class="slide">
+                    <img id="img3" data-image="3" src="assents/imgs/carrossel/img3.png" alt="LavandoCarro3" class="slide">
+                    <img id="img4" data-image="4" src="assents/imgs/carrossel/img4.jpg" alt="LavandoCarro4" class="slide">
+                </div>
+        
+                <button id="prox-btn"><img src="assents/imgs/arrow.png" alt="prox-btn"></button>
+        
+            </div>
+        
+        
+            <div class="container-bola">
+                <i class="bola" data-image="1" id="bola1"></i>
+                <i class="bola" data-image="2" id="bola2"></i>
+                <i class="bola" data-image="3" id="bola3"></i>
+                <i class="bola" data-image="4" id="bola4"></i>
+            </div> -->
+
+
+
+            @if (count($address) > 0)
+            @else
+            <ul>
+                <a href=" {{ route('address.form') }} ">
+                <li>cadastre um enedereco para comecar</li>
+                </a>
+            </ul>
+            @endif
+
+
+
+    <section class="container_all">
+        
+        <div class="background"> 
+            <div class="container_search">
+
+                <div class="description_1">
+                    <h1>Lavonline</h1><br>
+                    <p>Pesquise a lavação mais próxima de você:</p><br>
+                </div>
+
+                <input type="search" class="search_text" name="procuar" placeholder="Ex: LAVAÇÃO DICAR" id="procurar">
+                <button type="submit" class="search_btn">
+                    <img class="lupa" src="/lavonline/assents/imgs/lupa.svg" alt="Lupa">
+                </button>
+            </div>
+
+            
+            </div>
+
+            <div class="container_lavs">
+                <div class="container_lavacao">
+
+            @foreach($washings as $washing)
+                <a href="{{ route('washing.information', $washing->id ) }}">
+                    <div class="card_lav">
+                    
+                        <img src="/img/washings/{{ $washing->image }}" alt="Lavação">
+                        <ul class="card_bottom">
+                            <p>{{ $washing->nome_fantasia }}</p>
+                            <p>R. {{ $washing->rua }}</p>
+                            <p>{{ $washing->bairro }}</p>
+                        </ul>
+                        </a>
+                    </div>
+                @endforeach       
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <main class="footer">
+
+        <footer>
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1><img src="/lavonline/assents/imgs/nav/Logo.png" class="img" alt="Logo"></h1>
+                    <p>Veja Algum de nossos exemplos nas nossas redes</p>
+    
+                    <div id="footer_social">
+                        <a href="#" class="footer_link" id="instagram">
+                            <img src="/lavonline/assents/imgs/footer/instagram.svg" alt="Instagram">
+                        </a>
+    
+                        <a href="#" class="footer_link" id="facebook">
+                            <img src="/lavonline/assents/imgs/footer/facebook.svg" alt="facebook">
+                        </a>
+    
+                        <a href="#" class="footer_link" id="whatsapp">
+                            <img src="/lavonline/assents/imgs/footer/whatsapp.svg" alt="whatsapp">
+                        </a>
+                    </div>
+                </div>
+           
+    
+            <ul class="footer_list">
+                <li>
+                    <h3>Outros</h3>
+                </li>
+    
+                <li>
+                    <a href="#" class="footer_link">Testeee</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer_link">Testeee2</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer_link">Testeee3</a>
+                </li>
+            </ul>
+    
+            <ul class="footer_list">
+                <li>
+                    <h3>Outros2</h3>
+                </li>
+    
+                <li>
+                    <a href="#" class="footer_link">Teste4</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer_link">Testeee5</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer_link">Testeee6</a>
+                </li>
+            </ul>
+    
+            <div class="footer_contato">
+    
+                <h3>Entre em Contato</h3>
+    
+                <p>
+                    Nos envie um email dando sujestões ou algo do tipo
+                </p><br>
+    
+                <div id="input_group">
+                    <input type="email" name="email" id="email">
+                    <button type="submit">
+                        <img src="/lavonline/assents/imgs/footer/gmail.svg" alt="email">
+                    </button>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div id="footer_copyright">
+            © Todos os direitos reservados para Lavonline
+        </div>
+            
+        </footer>
+    </main>
+    
+    
+        
+    </body>
+    </html>

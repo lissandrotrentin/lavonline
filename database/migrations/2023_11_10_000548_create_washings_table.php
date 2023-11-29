@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('numero');
             $table->string('cidade');
             $table->string('cep');
+            $table->string('image');
             $table->timestamps();
         });
     }

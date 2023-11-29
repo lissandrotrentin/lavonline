@@ -16,7 +16,8 @@ class Washing extends Model
         'numero',
         'cidade',
         'cep',
-        'owner_id'
+        'owner_id',
+        'image'
     ];
 
 
@@ -30,9 +31,10 @@ class Washing extends Model
         return $this->hasMany('App\Models\WashingMore');
     }
 
-    public function images()
+    public function services()
     {
-        return $this->hasMany('App\Models\ImagesWashing');
+        return $this->hasMany('App\Models\Service');
     }
+
 
 }

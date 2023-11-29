@@ -1,0 +1,27 @@
+
+
+table
+{
+    width: 50rem;
+    height: 20rem;
+}
+
+
+.other-month
+{
+    opacity: .20;
+}
+
+table td, table th
+{
+    font-size: 40px;
+}
+
+*input{
+    width: 4rem;
+}
+
+.day
+{
+    background-color: rgb(193, 252, 145);
+}
